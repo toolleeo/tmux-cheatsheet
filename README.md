@@ -14,7 +14,9 @@ This is an excerpt of the file:
 I organized the content so that every explanation is on the same line of the corresponding keybinding.
 Moreover, the "action" (e.g., open, kill, start, etc.) precedes the "target object" (e.g., window, pane, etc.).
 
-In this way, it is possible to grep the cheatsheet with a pattern like
+In this way, it is possible to grep the cheatsheet with a pattern like `action.*object`.
+
+For example:
 
 ```
 $ grep "close.*window" tmux-cheatsheet.txt 
