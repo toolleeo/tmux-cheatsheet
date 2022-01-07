@@ -1,0 +1,174 @@
+-------------------------------------
+Sessions
+-------------------------------------
+
+$ tmux                                start a new session
+$ tmux new                            start a new session
+$ tmux new-session                    start a new session
+: new                                 start a new session
+
+$ tmux new -s mysession               start a new session with the name mysession
+: new -s mysession                    start a new session with the name mysession
+
+$ tmux kill-ses -t mysession          kill/delete session mysession
+$ tmux kill-session -t mysession      kill/delete session mysession
+
+$ tmux kill-session -a                kill/delete all sessions but the current
+
+Ctrl + b $                            rename session
+
+Ctrl + b d                            detach from session
+
+: attach -d                           detach others on the session (Maximize window by detach other clients)
+
+$ tmux ls                             show all sessions
+$ tmux list-sessions                  show all sessions
+Ctrl + b s                            show all sessions
+
+$ tmux a -t mysession                 attach to a session with the name mysession
+$ tmux at -t mysession                attach to a session with the name mysession
+$ tmux attach -t mysession            attach to a session with the name mysession
+$ tmux attach-session -t mysession    attach to a session with the name mysession
+
+Ctrl + b w                            preview session and window
+
+Ctrl + b (                            move to previous session
+
+Ctrl + b )                            move to next session
+
+-------------------------------------
+Windows
+-------------------------------------
+
+Ctrl + b c                 preview session and window
+
+Ctrl + b ,                 rename current window
+
+Ctrl + b &                 close current window
+
+Ctrl + b p                 go to previous window
+
+Ctrl + b n                 go to next window
+
+Ctrl + b 0 ... 9           switch/select window by number
+
+: swap-window -s 2 -t 1    reorder window, swap window number 2 (src) and 1 (dst)
+
+: swap-window -t -1        move current window to the left by one position
+
+-------------------------------------
+Panes
+-------------------------------------
+
+Ctrl + b ;                     toggle last active pane
+
+Ctrl + b %                     split pane horizontally
+
+Ctrl + b "                     split pane vertically
+
+Ctrl + b {                     move the current pane left
+
+Ctrl + b }                     move the current pane right
+
+Ctrl + b up-arrow              switch to pane to the direction
+Ctrl + b down-arrow            switch to pane to the direction
+Ctrl + b right-arrow           switch to pane to the direction
+Ctrl + b left-arrow            switch to pane to the direction
+
+: setw synchronize-panes       toggle synchronize-panes (send command to all panes)
+
+Ctrl + b Spacebar              toggle between pane layouts
+
+Ctrl + b o                     switch to next pane
+
+Ctrl + b q                     show pane numbers
+
+Ctrl + b q 0 ... 9             switch/select pane by number
+
+Ctrl + b z                     toggle pane zoom
+
+Ctrl + b !                     convert pane into a window
+
+Ctrl + b + up-arrow            resize current pane height (holding second key is optional)
+Ctrl + b Ctrl + up-arrow       resize current pane height (holding second key is optional)
+Ctrl + b + down-arrow          resize current pane height (holding second key is optional)
+Ctrl + b Ctrl + down-arrow     resize current pane height (holding second key is optional)
+
+Ctrl + b + right-arrow         resize current pane width (holding second key is optional)
+Ctrl + b Ctrl + right-arrow    resize current pane width (holding second key is optional)
+Ctrl + b + left-arrow          resize current pane width (holding second key is optional)
+Ctrl + b Ctrl + left-arrow     resize current pane width (holding second key is optional)
+
+Ctrl + b x                     close current pane
+
+-------------------------------------
+Copy mode
+-------------------------------------
+
+: setw -g mode-keys vi   use vi keys in buffer
+
+Ctrl + b [               enter copy mode
+Ctrl + b PgUp            enter copy mode and scroll one page up
+
+q                        quit mode
+
+g                        go to top line
+G                        go to bottom line
+
+up-arrow                 scroll up
+down-arrow               scroll down
+
+h                        move cursor left
+j                        move cursor down
+k                        move cursor up
+l                        move cursor right
+
+w                        move cursor forward one word at a time
+b                        move cursor backward one word at a time
+
+/                        search forward
+?                        search backward
+
+n                        next keyword occurance
+N                        previous keyword occurance
+
+Spacebar                 start selection
+Esc                      clear selection
+Enter                    copy selection
+
+Ctrl + b ]               paste contents of buffer_0
+
+: show-buffer            display buffer_0 contents
+
+: capture-pane           copy entire visible contents of pane to a buffer
+
+: list-buffers           show all buffers
+
+: choose-buffer          show all buffers and paste selected
+
+: save-buffer buf.txt    save buffer contents to buf.txt
+
+: delete-buffer -b 1     delete buffer_1
+
+-------------------------------------
+Misc
+-------------------------------------
+
+Ctrl + b :          enter command mode
+
+: set -g OPTION     set OPTION for all sessions
+
+: setw -g OPTION    set OPTION for all windows
+
+: set mouse on      enable mouse mode
+
+-------------------------------------
+Help
+-------------------------------------
+
+$ tmux list-keys    list key bindings(shortcuts)
+: list-keys         list key bindings(shortcuts)
+Ctrl + b ?          list key bindings(shortcuts)
+
+tmux info           show every session, window, pane, etc...
+
