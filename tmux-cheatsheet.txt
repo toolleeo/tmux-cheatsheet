@@ -102,7 +102,7 @@ Ctrl + b Ctrl + left-arrow     resize current pane width (holding second key is 
 Ctrl + b x                     close current pane
 
 -------------------------------------
-Copy mode
+Copy mode (vi mode)
 -------------------------------------
 
 : setw -g mode-keys vi   use vi keys in buffer
@@ -135,6 +135,7 @@ N                        previous keyword occurance
 Spacebar                 start selection
 Esc                      clear selection
 Enter                    copy selection
+Ctrl + v                 toggle selection mode: line <-> rectangle
 
 Ctrl + b ]               paste contents of buffer_0
 
