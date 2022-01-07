@@ -7,8 +7,6 @@ However, I'd want to avoid to rely on a webpage for documentation that I would b
 
 For this reason I packaged a text file with the same content reported in [the above mentioned cheatsheet](https://tmuxcheatsheet.com/), with a format that is terminal friendly.
 
-This is an excerpt of the file:
-
 # Organization for effective search
 
 I organized the content so that every explanation is on the same line of the corresponding keybinding.
